@@ -3,7 +3,7 @@ import axios from 'axios'
 export function request(config) {//给这个实力命名为request，之后如果还需要有其他实力，可以在下面再创建
   // 1. 创建axios实例
   const instance = axios.create({
-    baseURL: 'http://123.207.32.32:8000',
+    baseURL: 'http://123.207.32.32:8000/api/h8',
     timeout: 5000,
   })
 
