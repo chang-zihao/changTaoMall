@@ -27,7 +27,7 @@ export default {
   },
   data() {
     return {
-      title: ["商品", "评论", "参数", "推荐"],
+      title: ["商品", "参数", "评论", "推荐"],
       currentIndex: 0,
     };
   },
