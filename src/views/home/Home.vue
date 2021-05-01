@@ -94,6 +94,7 @@ export default {
     //   console.log("-------");
     //   this.$refs.scroll && this.$refs.scroll.refresh();
     // });
+
     // 防抖
     const refresh = debounce(this.$refs.scroll.refresh, 500);
     this.$bus.$on("itemImageLoad", () => {
@@ -110,8 +111,10 @@ export default {
     this.$refs.scroll.scrollTo(0, this.saveY, 0);
   },
   deactivated() {
-    // console.log(this.saveY);
+    // 1. 保存Y值
     this.saveY = this.$refs.scroll.getScrollY();
+    // 2. 取消全局事件监听
+    // this.$bus.$off("itemImageLoad",);
   },
 
   methods: {
